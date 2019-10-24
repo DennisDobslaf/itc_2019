@@ -13,3 +13,4 @@ $logger->debug('Just a test', $data);
 $logger->warning('Just a test');
 $logger->error('Just a test');
 
+echo "Test";
