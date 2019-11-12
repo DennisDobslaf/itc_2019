@@ -13,3 +13,6 @@
 [2019-10-24T12:55:43.242089+02:00] app.DEBUG: Just a test [{"test":42,"foo":"bar"},{"test":182,"foo":"baz"}] []
 [2019-10-24T12:55:43.246967+02:00] app.WARNING: Just a test [] []
 [2019-10-24T12:55:43.247103+02:00] app.ERROR: Just a test [] []
+[2019-11-08T20:07:39.389512+01:00] app.DEBUG: Just a test [{"test":42,"foo":"bar"},{"test":182,"foo":"baz"}] []
+[2019-11-08T20:07:39.395202+01:00] app.WARNING: Just a test [] []
+[2019-11-08T20:07:39.395519+01:00] app.ERROR: Just a test [] []
