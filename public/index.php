@@ -14,3 +14,5 @@ $logger->warning('Just a test');
 $logger->error('Just a test');
 
 echo "Test";
+
+echo password_hash('demo123', PASSWORD_BCRYPT, ['cost' => 12]);
