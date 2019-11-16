@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO('mysql:host=localhost;dbname=itc', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=itc2019', 'itc2019', 'itc2019');
 $query = 'DELETE FROM user 
                 WHERE
                 id=:id';
