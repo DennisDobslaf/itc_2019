@@ -5,7 +5,7 @@
 //$_POST['name'];
 
 // VERARBEITUNG
-$db = new PDO('mysql:host=localhost;dbname=itc2019', 'itc2019', 'itc2019');
+$db = new PDO($dbParams['dsn'], $dbParams['user'], $dbParams['pass']);
 $query = 'UPDATE user SET 
                 name=:name,
                 firstname=:firstname,
@@ -30,4 +30,6 @@ $preparedStmt->execute();
 //AUSGABE AB HIER
 ?>
 HTML CODE MIT FORMULAR
+Gleiches Formular wie bei create, aber Benutzer (anhand ID) vorher auslesen
+und hinterher auch mit der ID updaten
 

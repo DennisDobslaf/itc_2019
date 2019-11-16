@@ -1,11 +1,13 @@
 <?php
 
-$db = new PDO('mysql:host=localhost;dbname=itc2019', 'itc2019', 'itc2019');
+$db = new PDO($dbParams['dsn'], $dbParams['user'], $dbParams['pass']);
 $query = 'DELETE FROM user 
                 WHERE
                 id=:id';
 $preparedStmt = $db->prepare($query);
 
-$preparedStmt->bindValue(':id', 1);
+$preparedStmt->bindValue(':id', $_GET['id']);
 
 $preparedStmt->execute();
+
+header('Location: index.php');
