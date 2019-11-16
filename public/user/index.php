@@ -20,31 +20,32 @@ foreach ($db->query($query, PDO::FETCH_CLASS, 'User') as $user) {
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <a href="create.php"><i class="fa fa-user-plus"></i> Neuen Benutzer anlegen</a>
 
-<a href="create.php"><i class="fa fa-user"></i> Neuen Benutzer anlegen</a>
-
-<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Firstname</th>
-        <th>E-Mail</th>
-        <th>Birthday</th>
-        <th>&nbsp;</th>
-    </tr>
-    <?php foreach ($users as $user) { ?>
+    <table class="table table-striped">
         <tr>
-            <td><?=$user->getId()?></td>
-            <td><?=$user->getName()?></td>
-            <td><?=$user->getFirstname()?></td>
-            <td><?=$user->getEmail()?></td>
-            <td><?=$user->getBirthday()?></td>
-            <td>
-                <a href="edit.php?id=<?=$user->getId()?>" title="Benutzer bearbeiten"><i class="fa fa-user-plus"></i></a>
-                <a href="delete.php?id=<?=$user->getId()?>" title="Benutzer löschen"><i class="fa fa-user-times"></i></a>
-            </td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Firstname</th>
+            <th>E-Mail</th>
+            <th>Birthday</th>
+            <th>&nbsp;</th>
         </tr>
-    <?php } ?>
-</table>
+        <?php foreach ($users as $user) { ?>
+            <tr>
+                <td><?=$user->getId()?></td>
+                <td><?=$user->getName()?></td>
+                <td><?=$user->getFirstname()?></td>
+                <td><?=$user->getEmail()?></td>
+                <td><?=$user->getBirthday()?></td>
+                <td>
+                    <a href="edit.php?id=<?=$user->getId()?>" title="Benutzer bearbeiten"><i class="fa fa-user"></i></a>
+                    <a href="delete.php?id=<?=$user->getId()?>" title="Benutzer löschen"><i class="fa fa-user-times"></i></a>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+</div>
 </body>
 </html>
