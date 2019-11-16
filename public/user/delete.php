@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../../config/config.php';
 $db = new PDO($dbParams['dsn'], $dbParams['user'], $dbParams['pass']);
 $query = 'DELETE FROM user 
                 WHERE

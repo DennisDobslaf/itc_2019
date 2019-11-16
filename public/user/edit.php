@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../../config/config.php';
+
 // E V A
 // EINGABE
 //wenn Formular gesendet, dann Daten prüfen, wenn ok, dann in DB schreiben
